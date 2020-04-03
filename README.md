@@ -10,10 +10,6 @@ MXParallaxHeader is a simple header class for UIScrollView.
 
 In addition, MXScrollView is a UIScrollView subclass with the ability to hook the vertical scroll from its subviews, this can be used to add a parallax header to complex view hierachy. Moreover, MXScrollViewController allows you to add a MXParallaxHeader to any kind of UIViewController.
 
-|             UIScrollView        |           MXScrollViewController          |
-|---------------------------------|-------------------------------------------|
-|![Demo](Example-objc/demo1.gif)|![Demo](Example-objc/demo2.gif)|
-
 ## Usage
 
 If you want to try it, simply run:
