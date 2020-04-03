@@ -195,7 +195,9 @@ static void * const kMXScrollViewKVOContext = (void*)&kMXScrollViewKVOContext;
             
             //Manage scroll up
             if (self.contentOffset.y < -self.parallaxHeader.minimumHeight && _lock && diff < 0) {
-                [self scrollView:scrollView setContentOffset:old];
+                if (old.y >= 0) { // 和下拉刷新冲突，导致崩溃
+                    [self scrollView:scrollView setContentOffset:old];
+                }
             }
             //Disable bouncing when scroll down
             if (!_lock && ((self.contentOffset.y > -self.contentInset.top) || self.bounces)) {
