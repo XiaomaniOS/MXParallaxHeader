@@ -200,7 +200,7 @@ static void * const kMXScrollViewKVOContext = (void*)&kMXScrollViewKVOContext;
                 }
             }
             //Disable bouncing when scroll down
-            if (!_lock && ((self.contentOffset.y > -self.contentInset.top) || self.bounces)) {
+            if (!_lock && ((ceil(self.contentOffset.y) > ceil(-self.contentInset.top)) || self.bounces)) {
                 [self scrollView:scrollView setContentOffset:CGPointMake(scrollView.contentOffset.x, -scrollView.contentInset.top)];
             }
         }
